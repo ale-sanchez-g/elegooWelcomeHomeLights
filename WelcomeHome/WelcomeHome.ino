@@ -37,9 +37,10 @@ void loop()
       {
 
         digitalWrite(color[i], HIGH);
-        delay(prices[i] * 100);
+        delay(prices[i] * 10);
 
-        digitalWrite(color[i], LOW);
+        digitalWrite(color[i, LOW);
+        delay(100);
         Serial.println("delay time " + String(prices[i]));
       }
       
