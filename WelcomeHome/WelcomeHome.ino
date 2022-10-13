@@ -25,10 +25,9 @@ void loop()
     // Light show sequence
     const int SIZE = 12;
     int prices[SIZE] = {1, 3, 3, 2, 1, 1, 1, 3, 3, 2, 1, 1};
-    int color[SIZE] = {bluePin, redPin, redPin, yellowPin, bluePin, bluePin, bluePin, redPin, redPin, yellowPin, bluePin, bluePin};
 
     // Repease the light show 3 times
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j < 5; j++)
     {      
       Serial.println("Round : " + String(j));
 
@@ -36,10 +35,14 @@ void loop()
       for (int i = 0; i < SIZE; i++)
       {
 
-        digitalWrite(color[i], HIGH);
+        digitalWrite(bluePin, HIGH);
+        digitalWrite(redPin, HIGH);
+        digitalWrite(yellowPin, HIGH);
         delay(prices[i] * 10);
 
-        digitalWrite(color[i, LOW);
+        digitalWrite(bluePin, LOW);
+        digitalWrite(redPin, LOW);
+        digitalWrite(yellowPin, LOW);
         delay(100);
         Serial.println("delay time " + String(prices[i]));
       }
@@ -62,5 +65,5 @@ void loop()
     }
   }
 
-  delay(500);
+  delay(2000);
 }
